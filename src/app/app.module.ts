@@ -7,6 +7,8 @@ import { MonthStatisticsComponent } from './month-statistics/month-statistics.co
 import { DayStatisticsComponent } from './day-statistics/day-statistics.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { DinamicCalendarComponent } from './dinamic-calendar/dinamic-calendar.component';
+import { DisplaysMonthComponent } from './displays-month/displays-month.component';
+import { AppRoutingModule } from './/app-routing.module';
 
 
 @NgModule({
@@ -15,10 +17,12 @@ import { DinamicCalendarComponent } from './dinamic-calendar/dinamic-calendar.co
     MonthStatisticsComponent,
     DayStatisticsComponent,
     CalendarComponent,
-    DinamicCalendarComponent
+    DinamicCalendarComponent,
+    DisplaysMonthComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
