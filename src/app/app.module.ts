@@ -22,7 +22,8 @@ import { AppRoutingModule } from './/app-routing.module';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule        // RouteComponens hiányzik...azt is hozzá kell adni, hogy kezelni tudja a routokat.
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
