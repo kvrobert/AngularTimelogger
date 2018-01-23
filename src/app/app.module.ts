@@ -9,6 +9,9 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { DinamicCalendarComponent } from './dinamic-calendar/dinamic-calendar.component';
 import { DisplaysMonthComponent } from './displays-month/displays-month.component';
 import { AppRoutingModule } from './/app-routing.module';
+import {RouterModule} from '@angular/router';
+import { DisplaysDaysComponent } from './displays-days/displays-days.component';
+import { DisplaysTasksComponent } from './displays-tasks/displays-tasks.component';
 
 
 @NgModule({
@@ -18,12 +21,14 @@ import { AppRoutingModule } from './/app-routing.module';
     DayStatisticsComponent,
     CalendarComponent,
     DinamicCalendarComponent,
-    DisplaysMonthComponent
+    DisplaysMonthComponent,
+    DisplaysDaysComponent,
+    DisplaysTasksComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule        // RouteComponens hiányzik...azt is hozzá kell adni, hogy kezelni tudja a routokat.
-    
+    AppRoutingModule,       // RouterModule hiányzik...azt is hozzá kell adni, hogy kezelni tudja a routokat.
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
