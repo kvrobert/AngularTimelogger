@@ -5,6 +5,6 @@ export class Task {
   day: number;
   taskId: string;
   comment: string;
-  startTime: any;
-  endTime: any;
+  startTime: string;
+  endTime: string;
 }

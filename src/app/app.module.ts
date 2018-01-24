@@ -12,6 +12,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import {RouterModule} from '@angular/router';
 import { DisplaysDaysComponent } from './displays-days/displays-days.component';
 import { DisplaysTasksComponent } from './displays-tasks/displays-tasks.component';
+import {TimeloggerService} from "./timelogger.service";
 
 
 @NgModule({
@@ -30,7 +31,7 @@ import { DisplaysTasksComponent } from './displays-tasks/displays-tasks.componen
     AppRoutingModule,       // RouterModule hiányzik...azt is hozzá kell adni, hogy kezelni tudja a routokat.
     RouterModule
   ],
-  providers: [],
+  providers: [ TimeloggerService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -104,3 +104,6 @@ section#calendarSection table.calendarTable tbody tr.week td:hover #enabledDay{
   border-radius: 10px;
 
 }
+section#calendarSection table.calendarTable tbody tr.week td:hover #enabledDay a{
+  text-decoration: none;
+}

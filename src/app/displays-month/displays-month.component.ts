@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {WorkMonth} from '../Entity/work-month';
+import {TimeloggerService} from "../timelogger.service";
 
 @Component({
   selector: 'app-displays-month',
@@ -10,16 +11,16 @@ export class DisplaysMonthComponent implements OnInit {
 
   private tableHeader: string[] = ['Year', 'Month', 'Edit', 'Delete'];
 
-  workMonths: WorkMonth[] = [
-    {year: 2017, month: 10},
-    {year: 2017, month: 10},
-    {year: 2017, month: 10},
-  ];
+  workMonths: WorkMonth[];
 
-
-  constructor() { }
+  constructor(private timeloggerService: TimeloggerService) { }
 
   ngOnInit() {
+    this.getWorkMonths();
   }
 
+  getWorkMonths(): void {
+   this.timeloggerService.getWorkMonths()
+     .subscribe( months => this.workMonths = months );
+  }
 }
